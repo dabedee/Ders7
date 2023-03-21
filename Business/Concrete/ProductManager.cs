@@ -12,18 +12,18 @@ namespace Business.Concrete
 {
     public class ProductManager : IProductService // manager görürsen iş katmanının somut kısmı
     {
-        IProductDal _ProductDal;
+        IProductDal _productDal;
 
         public ProductManager(IProductDal productDal)
         {
-            _ProductDal = productDal;
+            _productDal = productDal;
         }
 
         public List<Product> GetAll()
         {
             // iş kodları 
             // yetkisi var mı 
-            return _ProductDal.GetAll();
+            return _productDal.GetAll();
         }
     }
 }
